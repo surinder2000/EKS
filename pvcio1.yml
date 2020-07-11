@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: myio1vol
+
+spec:
+    storageClassName: mysc
+    accessModes:
+    -   ReadWriteOnce
+    resources:
+        requests:
+            storage: 5Gi
+
+

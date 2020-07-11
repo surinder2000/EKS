@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+secretGenerator:
+     -  name: mysqlpass
+        literals:
+         -  password=redhat
+
+resources:
+ -  mysql_deployment.yml
+ -  wordpress_deployment.yml
+
+
